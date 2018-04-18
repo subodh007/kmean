@@ -9,9 +9,6 @@ df = pd.read_csv('./custdata.csv',sep=',')
 #Make a copy of DF
 df_tr = df
 
-#Transsform the timeOfDay to dummies
-#df_tr = pd.get_dummies(df_tr, columns=['timeOfDay'])
-
 #Standardize
 clmns = ['customer_id', 'basket_id','item_id']
 df_tr_std = stats.zscore(df_tr[clmns])
